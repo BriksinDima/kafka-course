@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'io.kafka'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.1.0'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.36'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.opensearch.client:opensearch-rest-high-level-client:1.2.4'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
